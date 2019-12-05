@@ -1,0 +1,416 @@
+:root {
+    --black: #000;
+    --dark-gray: #222;
+    --cyan-gray: #3e4149;
+    --gray: #444f5a;
+    --redish: #c80d26;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Permanent Marker', cursive;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--redish);
+    font-size: 3rem;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline-block;
+    padding: 14px;
+    text-align: right;
+}
+
+li a {
+    display: inline;
+    color: var(--redish);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navigationbar {
+    width: 100%;
+    background-color: var(--dark-gray);
+    text-align: right;
+}
+
+.navigation-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    width: 55%;
+    margin: 0 auto;    
+}
+
+.main-header {
+    background-image:
+    linear-gradient(to right bottom, rgba(240, 208, 187, 0.418), rgba(9, 0, 10, 0.2)),
+    url('../img/architecture-bay-bridge-1398195.jpg');
+    height: 75vh;
+    display: grid;
+    width: auto;
+    background-size: cover;
+    background-position-y: 65%;  
+    align-items: center;
+    align-content: center;
+    }
+.main-header p {
+    text-align: center;
+    color: var(--black);
+    bottom: 40%;
+    font-size: 20px;
+}
+
+@media (max-width: 568px) {
+    .navigationbar {
+    text-align: center;
+    }
+    .navigation-wrapper {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+li {
+        width: 300px;
+        text-align: center;
+    }
+}
+    
+.container {
+    height: 30%;
+    text-align: center;
+}
+
+.button {
+	box-shadow: 0px 10px 14px -7px #c80d26;
+	background:linear-gradient(to bottom, #c80d26 5%, #c80d26 100%);
+	background-color:#c80d26;
+	border-radius:4px;
+	border:1px solid #c80d26;
+	display:inline-block;
+	cursor:pointer;
+	color: black;
+	font-family: 'Yeon Sung', cursive;
+	font-size:20px;
+	font-weight:bold;
+	padding:15px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #c80d26;
+}
+
+.button:hover {
+	background:linear-gradient(to bottom, #c80d26 5%, #c80d26 100%);
+	background-color:#c80d26;
+}
+
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+/*Feature Section*/
+
+.textboxes{
+    width: 75%;
+    height: 100%;
+    padding: 2rem;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+}
+
+.features{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    width: 100%;
+    height: 50%;
+    font-size: 20px;
+}
+
+.feature{
+    background: rgb(224, 224, 224);
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    border: 1px solid blacks;
+}
+
+.feature h2 {
+    color: red;
+}
+.feature h4 {
+    color: red;
+}
+
+.features :hover{
+    background-color: #c80d26;
+}
+
+@media (max-width: 568px) {
+    .features {
+        grid-template-rows: 250px 250px 250px;
+        grid-template-columns: 250px 250px;
+    }
+}
+
+/*Video container*/
+
+.video-container {
+    background-image:
+    linear-gradient(to right bottom, rgba(240, 208, 187, 0.418), rgba(9, 0, 10, 0.2)),
+    url('../img/abstract-architecture-building-exterior-geometric-593158.jpg');
+    height: 75vh;
+    display: grid;
+    width: auto;
+    background-size: cover;
+    background-position-y: 65%;  
+    align-items: center;
+    align-content: center;
+}
+
+.video-container p {
+    text-align: center;
+    color: var(--black);
+    bottom: 40%;
+    font-size: 20px;
+}
+
+/*Works container*/
+
+.works-navigationbar {
+    width: 55%;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+.works p {
+    text-align: center;
+    color: var(--black);
+    bottom: 40%;
+    margin:0 auto;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.navigation-wrapper-works {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    width: 55%;
+    margin: 0 auto;    
+}
+.navigation-wrapper-works a{
+    color: var(--redish);
+    font-size: 20px;
+}
+
+@media (max-width: 568px){
+    .works-navigationbar{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/*Gallery container*/
+
+.gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: 
+    "bigImg img1 img2"
+    "bigImg img3 img4";
+    gap: 2vw;
+    width: max-content;
+    margin: 25px auto;
+}
+
+.galleryImg {
+    width: 12vw;
+    height: 12vw;
+}
+.bigImg {
+    width: 28vw;
+    height: 28vw;
+    grid-area: bigImg;
+}
+.img1 {
+    grid-area: img1;
+}
+.img2 {
+    grid-area: img2;
+}
+.img3 {
+    grid-area: img3;
+}
+.img4 {
+    grid-area: img4;
+}
+
+/*About us container*/
+
+.about-us{
+    background-image:
+    linear-gradient(to right bottom, rgba(240, 208, 187, 0.418), rgba(9, 0, 10, 0.2)),
+    url('../img/abstract-1867838_1920.jpg');
+    height: 75vh;
+    display: grid;
+    width: auto;
+    background-size: cover;
+    background-position-y: 65%;  
+    align-items: center;
+    align-content: center;
+}
+
+.about-us p{
+    text-align: center;
+    color: var(--black);
+    bottom: 40%;
+    margin:0 auto;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/*Statistics container*/
+
+.indicator {
+    height: 6px;
+    width: 100%;
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(236,211,0,1) 50%, rgba(0,255,5,1) 100%);
+    margin: 10px auto 40px auto;
+    position: relative;
+}
+.indicator::after {
+    content: "▏";
+    position: absolute;
+    height: 15px;
+    top: -8px;
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+}
+.indicator1::after {
+    width: 100px;
+    left: 400px;
+}
+.indicator2::after {
+    width: 25px;
+    left: 475px;
+}
+.indicator3::after {
+    left: 375px;
+    width: 125px;
+}
+.indicator4::after {
+    left: 265px;
+    width: 235px;
+}
+.indicator5::after {
+    left: 420px;
+    width: 80px;
+}
+.statGradient {
+    display: block;
+    width: 500px;
+    margin: 25px auto 0 auto;
+}
+.indicatorName {
+    font-weight: 700;
+}
+span.right {
+    float: right;
+}
+
+.statistic{
+    text-align: center;
+    font-size: 20px;
+}
+
+@media (max-width: 568px){
+    .statistic{
+        display: none;
+    }
+
+    
+}
+
+ /*Contact container*/
+
+ .contact-container {
+    width: 100%;
+
+    display: grid;
+    text-align: center;
+    width: auto;
+    background-size: cover;
+    background-position-y: 65%;  
+    background-color: var(--dark-gray);
+}
+
+.contact-container a{
+    color: var(--redish);
+    font-size: 20px;
+    background-color: var(--darkGray);
+}
+
+.contacts {
+    background-color: var(--darkGray);
+    height: 300px;
+}
+.contacts-Info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: max-content;
+    margin: 30px auto 0 auto;
+}
+.contact-Item {
+    
+    width: 300px;
+}
+.contact-Item img {
+    height: 40px;
+    float: left;
+    padding: 5px;
+}
+.contact-Item p {
+    color:var(--redish);
+    font-weight: 600;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+/*Copyrigth container*/
+
+.copy-right {
+    background-color: var(--dark-gray);
+    color: var(--redish);
+    text-align: center;
+    padding: 10px 0px;
+    font-weight: 700;
+    margin-top: -35px;
+    font-size: 20px;
+}
+
+@media(max-width: 568px) {
+    .contacts-Info {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
